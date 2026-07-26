@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bernard BFC Boutique</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f5f1e8}
+header{background:#8B4513;color:white;padding:30px;text-align:center}
+nav{background:#5C3317;padding:12px;text-align:center;position:sticky;top:0}
+nav a{color:white;margin:0 12px;text-decoration:none;font-weight:bold}
+section{background:white;padding:30px;margin:20px auto;max-width:900px;border-radius:10px}
+img{width:100%;border-radius:10px;margin:15px 0}
+h2{color:#8B4513}
+table{width:100%}td{padding:12px;border-bottom:1px solid #ddd}
+td:last-child{text-align:right;font-weight:bold;color:#8B4513}
+input,select{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc;border-radius:5px}
+.btn{background:#0088cc;color:white;padding:15px;border-radius:8px;display:block;text-align:center;font-weight:bold;font-size:18px;border:none;width:100%;margin-top:10px}
+footer{background:#5C3317;color:white;text-align:center;padding:30px}
+footer a{color:#25D366;font-weight:bold}
+</style>
+</head>
+<body>
+<header><h1>🪵 BERNARD BFC BOUTIQUE</h1><p>Vente et livraison de bois de chauffage</p></header>
+<nav><a href="#accueil">Accueil</a><a href="#produits">Produits</a><a href="#tarifs">Tarifs</a><a href="#commande">Commander</a></nav>
+<section id="accueil"><h2>Livraison partout 🚚</h2><img src="bois1.jpg"><p>Bois de chauffage sec et de qualité.</p><a class="btn" href="https://services.zangi.com/dl/conversation/9800834905" target="_blank">📱 Commander sur Zangui</a></section>
+<section id="produits"><h2>Nos Produits</h2><p>🪵 <b>Sac de bois</b><br>🪵 <b>Fagot</b><br>🪵 <b>Stère</b></p><img src="bois2.jpg"><img src="bois3.jpg"></section>
+<section id="tarifs"><h2>Nos Tarifs</h2><table><tr><td>1 stère</td><td>40 €</td></tr><tr><td>10 stères</td><td>400 €</td></tr><tr><td>15 stères</td><td>600 €</td></tr><tr><td>30 stères</td><td>1 000 €</td></tr><tr><td>60 stères</td><td>1 900 €</td></tr><tr><td>115 stères</td><td>3 800 €</td></tr></table><p><b>🚚 Livraison disponible partout</b></p></section>
+<section id="commande"><h2>Faire votre commande</h2><input id="nom" placeholder="Nom et Prénom"><input id="tel" placeholder="Téléphone"><input id="adresse" placeholder="Adresse"><select id="produit"><option>1 Stère - 40€</option><option>10 Stères - 400€</option><option>15 Stères - 600€</option><option>30 Stères - 1000€</option><option>60 Stères - 1900€</option><option>115 Stères - 3800€</option></select><button class="btn" onclick="envoyer()">Envoyer sur Zangui 📱</button></section>
+<footer><a href="https://services.zangi.com/dl/conversation/9800834905" target="_blank">📱 Nous écrire sur Zangui</a><p>📞 98-00-83-49-05</p></footer>
+<script>
+function envoyer(){
+let n=document.getElementById('nom').value;let t=document.getElementById('tel').value;let a=document.getElementById('adresse').value;let p=document.getElementById('produit').value;
+if(n==""||t==""||a==""){alert("Remplis tout");return}
+window.open(`https://services.zangi.com/dl/conversation/9800834905?text=*COMMANDE*%0A*Nom:*${n}%0A*Tel:*${t}%0A*Adresse:*${a}%0A*Produit:*${p}`,'_blank')
+}
+</script>
+</body>
+                                                                                                                                                                                                                                          </html>
